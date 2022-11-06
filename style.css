@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@100;400;700&display=swap');
+
+:root{
+    --cyan:hsl(179, 62%, 43%);
+    --yellow: hsl(71, 73%, 54%);
+    --gray:hsl(204, 43%, 93%);
+    --bluish:hsl(218, 22%, 67%);
+}
+body{
+    background-color: var(--gray);
+    color: var(--bluish);
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h2{
+    font-size: 1.17rem;
+}
+.container{
+    width: 80%;
+    margin: 60px auto;
+    border-radius: 7px;
+    display: grid;
+    overflow: hidden;
+}
+
+.box{
+ box-sizing: border-box;
+ padding: 20px;
+ height: fit-content;
+}
+
+
+.first{
+    background-color: white;
+}
+
+.first .heading{
+    color: var(--cyan);
+}
+
+.first span{
+    color: var(--yellow);
+    font-size: 20px;
+    font-weight: 700;
+}
+.second{
+    background-color: var(--cyan);
+    color: var(--gray);
+}
+
+.anual-sub{
+    font-weight: 100;
+    color: hsla(204, 43%, 93%, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.big{
+    color: white;
+    font-size: 34px;
+    font-weight: 700;
+}
+.third{
+    background-color: #4abebd;
+    color: var(--gray);
+}
+
+.third ul{
+    padding-inline-start: 0%;
+    list-style: none;
+    margin-top: 21px;
+    color: hsla(204, 43%, 93%, 0.8);
+}
+
+.sign_up{
+    font-size: 20px;
+    color: var(--gray);
+    background-color: var(--yellow);
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 9px 32px -16px black;
+}
+
+@media only screen and (min-width:760px){
+    body{
+        height: 100vh;
+        justify-content: center;
+        display: flex;
+    }
+    .container{
+        grid-template-columns: 1fr 1fr;
+        align-self: center;
+        max-width: 40rem;
+    }
+    
+    .box{
+        height: auto;
+        padding: 27px;
+    }
+    .first{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        padding: 20px 30px;
+    }
+    .sign_up{
+        margin-top: 20px;
+        width:93%;
+    }
+    
+}
+
+@media only screen and (max-width:300px){
+    .container{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:231px){
+    .heading{
+        font-size: 100%;
+    }
+    .first span{
+        font-size: 100%;
+    }
+    h2{
+        font-size: 100%;
+    }
+    .sign_up{
+        overflow-wrap: anywhere;
+    }
+}
